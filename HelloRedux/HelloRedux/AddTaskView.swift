@@ -50,5 +50,5 @@ struct AddTaskView: View {
 
 #Preview {
     AddTaskView()
-        .environmentObject(Store(state: AppState(), reducer: appReducer))
+        .environmentObject(Store(state: AppState(), reducer: appReducer, middlewares: [logMiddleware()]))
 }

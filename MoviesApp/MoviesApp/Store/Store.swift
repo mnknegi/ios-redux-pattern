@@ -16,14 +16,14 @@ protocol ReduxState { }
 protocol Action { }
 
 struct AppState: ReduxState {
-
+    
 }
 
 class Store<StoreState: ReduxState>: ObservableObject {
 
     var reducer: Reducer<StoreState>
     @Published var state: StoreState
-    var middlewares: [Middleware<StoreState>]
+    var middlewares: [Middleware<StoreState>] = []
 
     init(state: StoreState,
          reducer: @escaping Reducer<StoreState>,

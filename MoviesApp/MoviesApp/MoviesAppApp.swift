@@ -10,6 +10,9 @@ import SwiftUI
 @main
 struct MoviesAppApp: App {
     var body: some Scene {
+
+        let store = Store(state: AppState(), reducer: appReducer, middlewares: [])
+
         WindowGroup {
             ContentView()
         }

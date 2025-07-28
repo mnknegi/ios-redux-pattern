@@ -13,7 +13,8 @@ struct HelloReduxApp: App {
 
         let store = Store<AppState>(state: AppState(),
                           reducer: appReducer,
-                          middlewares: [logMiddleware()])
+                          middlewares: [logMiddleware(),
+                                       incrementMiddleware()])
 
         WindowGroup {
             ContentView()

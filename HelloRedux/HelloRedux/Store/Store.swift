@@ -31,6 +31,8 @@ protocol Action { }
 struct IncrementAction: Action { }
 struct DecrementAction: Action { }
 
+struct IncrementActionAsync: Action { }
+
 struct AddAction: Action {
     var value: Int
 }
